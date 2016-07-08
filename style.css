@@ -1,0 +1,414 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+
+nav{
+	background: #fff;
+	border-bottom: 1px solid #E6E6E6;
+	display: block;
+	width: 100%;
+	height: 48px;
+}
+
+.container{
+	max-width: 1100px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+nav div#logo{
+	float: left;
+}
+
+nav div#logo a{
+	margin-top: 13px;
+	display: inline-block;
+}
+
+nav div#logo a img{
+	height: 23px;
+	width: 100px;
+}
+
+nav ul.left-btns{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	margin-left: 18px;
+	position: relative;
+	height: 50px;
+	z-index: 2;
+}
+
+nav ul.left-btns > li{
+	float: left;
+	position: relative;
+}
+
+nav ul.left-btns > li > a{
+	padding: 15px 20px;
+	display: inline-block;
+	text-decoration: none;
+	color: #2F2F2F;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	transition: 1s;
+}
+
+nav ul.left-btns > li > a:hover, nav ul.left-btns > li > a:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+nav ul.left-btns > li.dropdown > a:after{
+    content: "‹";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: 100;
+    transform: rotate(-90deg);
+}
+
+
+/*** navi drops ***/
+nav ul.left-btns > li.dropdown > ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 48px;
+	left: 0px;
+	background: #F2F2F2;
+	width: 250px;
+	border-right: 1px solid #E6E6E6;
+	border-left: 1px solid #E6E6E6;
+	border-bottom: 1px solid #AAAAAA;
+	display: none;
+}
+
+nav ul.left-btns > li.dropdown > ul > li > a{
+	padding: 15px 20px;
+	display: block;
+	text-decoration: none;
+	color: #2F2F2F;
+	font-size: 15px;
+	position: relative;
+	transition: 1s;
+}
+
+nav ul.left-btns > li.dropdown > ul > li > a:hover{
+	background: #E5E5E5;
+	transition: 0.2s;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
+	content: "›";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0px;
+	font-size: 15px;
+	left: 250px;
+	background: #E5E5E5;
+	display: none;
+	width: 300px;
+	min-height: 100%;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright:hover{
+	background: #E5E5E5;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
+	display: block;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a{
+	padding: 15px 20px;
+	display: block;
+	color: #333333;
+	text-decoration: none;
+	transition: 1s;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a:hover{
+	background:#DBDBDB;
+	transition: 0.2s;
+}
+/*** /navi drops ***/
+
+/*** search ***/
+nav .search{
+	float: right;
+	display: block;
+	position: relative;
+}
+
+nav .search input{
+	width: 200px;
+	height: 20px;
+	padding: 6px 30px 6px 10px;
+	font-size: 17px;
+	margin-top: 6px;
+	color: #333;
+}
+nav .search input::-webkit-input-placeholder,
+nav .search input::-moz-placeholder,
+nav .search input:-moz-placeholder,
+nav .search input:-ms-input-placeholder{
+	color:#2F2F2F;
+}
+
+nav .search input:focus{
+	outline: none;
+}
+
+
+nav .search i{
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	color: #ABABB3;
+}
+/*** /search ***/
+
+/*** cart ***/
+.cart-btn{
+	padding: 15px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	float: right;
+	margin: 0 0 0 10px;
+	transition: 1s; 
+}
+
+.cart-btn:hover, .cart-btn:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+.cart-btn span{
+	font-size: 13px;
+}
+/*** /cart ***/
+
+/*** account-btn ***/
+.account-btn{
+	padding: 5px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #2F2F2F;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	float: right;
+	z-index: 2;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transition: 1s;
+}
+
+.account-btn:hover, .account-btn:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+.account-btn.active{
+	background: #fff;
+	border-left: 1px solid #DFDFDF;
+	border-right: 1px solid #DFDFDF;
+}
+
+.account-btn img{
+	-webkit-border-radius: 90px;
+	-moz-border-radius: 90px;
+	border-radius: 90px;
+	height: 38px;
+}
+
+.account-btn span{
+	padding-top: 10px;
+	padding-right: 5px;
+	color: #666;
+	display: inline-block;
+	font-size: 14px;
+}
+/*** /account-btn ***/
+
+/*** user-card ***/
+.user-card{
+	display: block;
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 47px;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #E6E6E6;
+	display: none;
+}
+
+.user-card img{
+	width: 64px;
+	height: 64px;
+	-webkit-border-radius: 90px;
+	-moz-border-radius: 90px;
+	border-radius: 90px;
+}
+
+.user-card .user-menu{
+	list-style: none;
+	padding: 0;
+	margin: 10px -10px -10px -10px; 
+}
+
+.user-card .user-menu li a{
+	padding: 10px 10px;
+	color: #333;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	transition: 1s;
+}
+
+.user-card .user-menu li a:hover{
+	background: #DFDFDF;
+	transition: 0.2s;
+}
+
+.user-card > div > span{
+	display: block;
+	font-size: 18px;
+	color: #333;
+	font-weight: normal;
+	margin: 0 0 0 80px;
+}
+
+.user-card > div > span:nth-child(3){
+	font-size: 15px;
+	color: #666;
+}
+/*** /user-card ***/
+
+.mobile-btn{
+	padding: 15px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	float: right;
+	margin: 0 0 0 10px;
+	display: none;
+	transition: 1s; 
+}
+
+.mobile-btn:hover, .mobile-btn:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+/*** media q ***/
+
+@media screen and (max-width: 1130px) {
+ 	nav div#logo{
+ 		margin-left: 15px;
+ 	}
+}
+
+@media screen and (max-width: 880px) {
+    nav .search input{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+	.mobile-btn{
+		display: block;
+	}
+
+    nav ul.left-btns{
+    	position: absolute;
+    	z-index: 2;
+    	top: 50px;
+    	width: 100%;
+    	margin-left: 0;
+    	border-bottom: 1px solid #dfdfdf;
+    	background: #fff;
+    	overflow-x: hidden;
+    	overflow-y: scroll;
+    	display: none;
+    }
+
+    nav ul.left-btns li{
+    	float: none;
+    	position: relative;
+    }
+
+    nav ul.left-btns li a{
+    	display: block;
+    }
+
+   nav ul.left-btns > li.dropdown > ul{
+    	position: relative;
+    	top: 0px;
+    	width: 100%;
+    	border: 0;
+    }
+
+     nav ul.left-btns > li.dropdown{
+     	width: 50%;
+     }
+
+    nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		top: 0px;
+		font-size: 15px;
+		left: 0px;
+		background: #E5E5E5;
+		display: none;
+		width: 100%;
+		min-height: 100%;
+		border-bottom: none;
+	}
+
+	nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
+		transform: rotate(90deg);
+	}
+
+	nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
+		display: none;
+	}
+
+	nav ul.left-btns > li.dropdown > a:after{
+		right: 10px;
+	}
+}

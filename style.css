@@ -1,0 +1,1087 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700&subset=latin,cyrillic-ext);
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+nav{
+	background: #fff;
+	border-bottom: 1px solid #E6E6E6;
+	display: block;
+	width: 100%;
+	height: 48px;
+}
+
+.container{
+	max-width: 1100px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+nav div#logo{
+	float: left;
+}
+
+nav div#logo a{
+	margin-top: 13px;
+	display: inline-block;
+}
+
+nav div#logo a img{
+	height: 23px;
+	width: 100px;
+}
+
+nav ul.left-btns{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	margin-left: 18px;
+	position: relative;
+	height: 50px;
+	z-index: 2;
+}
+
+nav ul.left-btns > li{
+	float: left;
+	position: relative;
+}
+
+nav ul.left-btns > li > a{
+	padding: 14px 20px;
+	display: inline-block;
+	text-decoration: none;
+	color: #2F2F2F;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	transition: 1s;
+}
+
+nav ul.left-btns > li > a:hover, nav ul.left-btns > li > a:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+nav ul.left-btns > li.dropdown > a:after{
+    content: "‹";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: 100;
+    transform: rotate(-90deg);
+}
+
+
+/*** navi drops ***/
+nav ul.left-btns > li.dropdown > ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 48px;
+	left: 0px;
+	background: #F2F2F2;
+	width: 250px;
+	border-right: 1px solid #E6E6E6;
+	border-left: 1px solid #E6E6E6;
+	border-bottom: 1px solid #AAAAAA;
+	display: none;
+}
+
+nav ul.left-btns > li.dropdown > ul > li > a{
+	padding: 15px 20px;
+	display: block;
+	text-decoration: none;
+	color: #2F2F2F;
+	font-size: 15px;
+	position: relative;
+	transition: 1s;
+}
+
+nav ul.left-btns > li.dropdown > ul > li > a:hover{
+	background: #E5E5E5;
+	transition: 0.2s;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
+	content: "›";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0px;
+	font-size: 15px;
+	left: 250px;
+	background: #E5E5E5;
+	display: none;
+	width: 300px;
+	min-height: 100%;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright:hover{
+	background: #E5E5E5;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
+	display: block;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a{
+	padding: 15px 20px;
+	display: block;
+	color: #333333;
+	text-decoration: none;
+	transition: 1s;
+}
+
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a:hover{
+	background:#DBDBDB;
+	transition: 0.2s;
+}
+/*** /navi drops ***/
+
+/*** search ***/
+nav .search{
+	float: right;
+	display: block;
+	position: relative;
+}
+
+nav .search input{
+	width: 200px;
+	height: 20px;
+	padding: 6px 30px 6px 10px;
+	font-size: 17px;
+	margin-top: 6px;
+	color: #333;
+}
+nav .search input::-webkit-input-placeholder,
+nav .search input::-moz-placeholder,
+nav .search input:-moz-placeholder,
+nav .search input:-ms-input-placeholder{
+	color:#2F2F2F;
+}
+
+nav .search input:focus{
+	outline: none;
+}
+
+
+nav .search i{
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	color: #ABABB3;
+}
+/*** /search ***/
+
+/*** cart ***/
+.cart-btn{
+	padding: 14px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	float: right;
+	margin: 0 0 0 10px;
+	transition: 1s; 
+}
+
+.cart-btn:hover, .cart-btn:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+.cart-btn span{
+	font-size: 13px;
+}
+/*** /cart ***/
+
+/*** account-btn ***/
+.account-btn{
+	padding: 5px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #2F2F2F;
+	font-size: 14px;
+	background: #fff;
+	position: relative;
+	float: right;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transition: 1s;
+}
+
+.account-btn:hover, .account-btn:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+.account-btn.active{
+	background: #fff;
+	z-index: 4;
+	border-left: 1px solid #DFDFDF;
+	border-right: 1px solid #DFDFDF;
+}
+
+.account-btn img{
+	-webkit-border-radius: 90px;
+	-moz-border-radius: 90px;
+	border-radius: 90px;
+	height: 38px;
+}
+
+.account-btn span{
+	padding-top: 10px;
+	padding-right: 5px;
+	color: #666;
+	display: inline-block;
+	font-size: 14px;
+}
+/*** /account-btn ***/
+
+/*** user-card ***/
+.user-card{
+	display: block;
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 47px;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #E6E6E6;
+	display: none;
+}
+
+.user-card img{
+	width: 64px;
+	height: 64px;
+	-webkit-border-radius: 90px;
+	-moz-border-radius: 90px;
+	border-radius: 90px;
+}
+
+.user-card .user-menu{
+	list-style: none;
+	padding: 0;
+	margin: 10px -10px -10px -10px; 
+}
+
+.user-card .user-menu li a{
+	padding: 10px 10px;
+	color: #333;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	transition: 1s;
+}
+
+.user-card .user-menu li a:hover{
+	background: #DFDFDF;
+	transition: 0.2s;
+}
+
+.user-card > div > span{
+	display: block;
+	font-size: 18px;
+	color: #333;
+	font-weight: normal;
+	margin: 0 0 0 80px;
+}
+
+.user-card > div > span:nth-child(3){
+	font-size: 15px;
+	color: #666;
+}
+/*** /user-card ***/
+
+/*** hero ***/
+#hero{
+	min-height: 700px;
+	margin-top: 0;
+	background: #F7F7F7;
+}
+
+#hero .back{
+	background: #F7F7F7 url(./images/hero_bg.jpg) no-repeat;
+	width: 60%;
+	left: 40%;
+	min-height: 700px;
+	position: absolute;
+}
+
+#hero h1{
+	margin-top: 100px;
+	display: inline-block;
+	width: 40%;
+	font-weight: 100;
+	margin-bottom: 10px;
+	color: #47525D;
+	font-size: 40px;
+	line-height: 1.5;
+}
+
+#hero p{
+	font-size: 22px;
+	width: 40%;
+	color: #57616B;
+	margin-top: 0px;
+}
+
+#hero a.btn{
+	background: #0071E0;
+	padding: 15px 20px;
+	color: #fff;
+	font-size: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	margin-top: 50px;
+	text-decoration: none;
+}
+
+#hero span{
+	display: block;
+	margin-top: 20px;
+}
+
+#hero span a{
+	color: #0071E0;
+	text-decoration: none;
+	border-bottom: 1px solid #0071E0;
+}
+/*** /hero ***/
+
+/*** invision ***/
+#invision{
+	background: #323A45;
+	display: block;
+	width: 100%;
+	padding: 110px 0 100px 0;
+}
+
+#invision h2{
+	color: #fff;
+	text-align: center;
+	font-weight: 100;
+}
+#invision .four-box{
+	width: 23%;
+	margin: 15px 0;
+	padding: 0 1%;
+	display: block;
+	float: left;
+	position: relative;
+}
+
+#invision .four-box input{
+	border: 2px solid #323A45;
+	padding: 15px 10px 15px 40px;
+	font-size: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	max-width: 85%;
+	margin: 5px 0;
+}
+
+#invision .four-box input.invalid{
+	border: 2px solid #FF3366;
+}
+
+#invision .four-box input.valid{
+	border: 2px solid #323A45;
+}
+
+#invision .four-box input:focus{
+	outline: none;
+}
+
+#invision .four-box input:after{
+	content: "";
+	background: url(./images/invasion.png);
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 5px;
+	top: 15px;
+}
+
+#invision .four-box span{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 24px;
+	height: 24px;
+	background: url(./images/invasion.png);
+	background-position: 0px 0px;
+}
+
+#invision .four-box button{
+	background: #FF3366;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	padding: 17px 5px;
+	text-transform: uppercase;
+	font-size: 13px;
+	border: 2px solid #FF3366;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	margin-top: 7px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#invision .four-box button:hover{
+	background: #F42156;
+	transition: 0.3s;
+}
+
+#invision p{
+	color: #747C83;
+	text-align: center;
+	font-size: 13px;
+}
+
+#invision p a{
+	color: #747C83;
+}
+/*** /invision ***/
+
+/*** oculus ***/
+
+#oculus div.third{
+	width: 33.3333%;
+	height: 300px;
+	display: block;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+#oculus div.third div.bg{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	display: block;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+    background-size: cover !important;
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+#oculus div.third:hover div.bg{
+	-moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#oculus div.third a{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.3s;
+	padding: 40px 15px;
+}
+
+#oculus div.third a h5{
+	color: #A4A5A6;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	padding-top: 50px;
+}
+
+#oculus div.third a h4{
+	margin-top: 0;
+	font-size: 22px;
+}
+
+#oculus div.third a:hover{
+	background: rgba(0,0,0,0);
+	transition: 0.3s;
+}
+
+/*** /oculus ***/
+
+/*** apple footer ***/
+
+#apple{
+	background: #F2F2F2;
+}
+
+#apple div.container{
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+#apple .fives{
+	display: block;
+	width: 18%;
+	float: left;
+	padding: 0 1%;
+}
+
+
+#apple .fives h5{
+	margin: 0;
+	margin-top: 15px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #000;
+}
+
+#apple .fives ul{
+	list-style: none;
+	padding:0;
+	margin: 0;
+}
+
+
+#apple .fives ul li a{
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;
+}
+
+#apple .fives ul li a:hover{
+	text-decoration: underline;
+}
+
+#apple .moreways{
+	font-size: 11px;
+	color: #999999;
+	display: block;
+	padding: 20px 10px 0 10px;
+
+}
+
+#apple .moreways a{
+	color: #0088CC;
+	text-decoration: none;
+}
+#apple .moreways a:hover{
+	text-decoration: underline;
+	color: #333;
+}
+
+#apple .copyright{
+	font-size: 11px;
+	color: #999999;
+	display: inline-block;
+	margin-top: 10px;
+	float: left;
+	padding: 0 10px;
+}
+
+#apple ul.terms{
+	list-style: none;
+	padding: 0;
+	margin: 5px 0;
+	margin-left: 20px;
+	display: inline-block;
+	float: left;
+}
+
+#apple ul.terms li{
+	float: left;
+	padding: 0;
+	margin: 0 10px;
+	position: relative;
+}
+
+#apple ul.terms li:after{
+	content: "|";
+	display: block;
+	position: absolute;
+	right: -15px;
+	top: 2px;
+	color: #D6D6D6;
+}
+
+#apple ul.terms li:nth-last-child(1):after{
+	display: none;
+}
+
+#apple ul.terms li a{
+	color: #666666;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#apple ul.terms li a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+
+#apple .language{
+	color: #999;
+	text-decoration: none;
+	font-size: 12px;
+	display: block;
+	float: right;
+	margin-top: 10px;
+}
+
+#apple .language img{
+	margin-right: 5px;
+}
+
+/*** /apple footer ***/
+
+/** mobile features ;D **/
+
+.mobile-btn{
+	padding: 14px 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #666;
+	font-size: 15px;
+	background: #fff;
+	position: relative;
+	float: right;
+	display: none;
+	transition: 1s; 
+}
+
+.mobile-btn:hover, .mobile-btn:focus{
+	background: #F2F2F2;
+	transition: 0.3s;
+}
+
+.mobile-btn.active{
+	background: #fff;
+	border-left: 1px solid #DFDFDF;
+	border-right: 1px solid #DFDFDF;
+	z-index: 4;
+}
+
+.mobile-search{
+	display: none;
+	padding: 15px 20px;
+}
+
+.mobile-search input{
+	padding: 5px 4%;
+	width:72%;
+	margin: 0;
+}
+
+.mobile-search button{
+	margin: 0;
+	width: 16%;
+	padding: 5px 2%;
+	background: transparent;
+	border: none;
+}
+
+/*** media q ***/
+
+@media screen and (min-width: 1710px) {
+	#hero .back{
+		right: 0px;
+		background-position: right center
+	}
+}
+
+@media screen and (max-width: 1140px) {
+	#hero h1,#hero p,#hero span{
+		padding-left: 20px;
+	}
+
+	#hero a.btn{
+		margin-left: 20px;
+	}
+}
+
+@media screen and (max-width: 1130px) {
+ 	nav div#logo{
+ 		margin-left: 15px;
+ 	}
+}
+
+@media screen and (max-width: 1070px) {
+	#hero .back{
+		width: 50%;
+		left: 50%;
+		min-height: 700px;
+		position: absolute;
+	}
+
+	#hero h1,#hero p{
+		width: 50%;
+	} 
+
+	#invision .four-box{
+		width: 300px;
+		float: none;
+		display: table;
+		margin: 0 auto;
+	}
+
+	#invision  h2,#invision p{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#invision .four-box button {
+		width: 98%;
+		margin-left: 2px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#hero h1{
+		font-size: 30px;
+		line-height: 1.2;
+	}
+}
+
+@media screen and (max-width: 900px) {
+    nav .search input{
+        display: none;
+    }
+
+    nav .search i{
+    	display: none;
+    }
+
+    #hero a.btn{
+		font-size: 16px;
+		margin-right: 20px;
+		text-align: center;
+	}
+
+	.mobile-btn{
+		display: block;
+	}
+
+    nav ul.left-btns{
+    	position: absolute;
+    	z-index: 2;
+    	top: 47px;
+    	right: 0;
+    	width: 250px;
+    	margin-left: 0;
+    	border-top: 1px solid #DFDFDF;
+    	background: #fff;
+    	overflow-x: hidden;
+    	overflow-y: auto;
+    	display: none;
+    }
+
+    nav ul.left-btns li{
+    	float: none;
+    	position: relative;
+    }
+
+    nav ul.left-btns li a{
+    	display: block;
+    }
+
+   nav ul.left-btns > li.dropdown > ul{
+    	position: relative;
+    	top: 0px;
+    	width: 100%;
+    	border: 0;
+    }
+
+     nav ul.left-btns > li.dropdown{
+     	width: 100%;
+     }
+
+    nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		top: 0px;
+		font-size: 15px;
+		left: 0px;
+		background: #E5E5E5;
+		display: none;
+		width: 100%;
+		min-height: 100%;
+		border-bottom: none;
+	}
+
+	nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
+		transform: rotate(90deg);
+	}
+
+	nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
+		display: none;
+	}
+
+	nav ul.left-btns > li.dropdown > a:after{
+		right: 10px;
+	}
+
+	.user-card{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		width: 300px;
+		top: 47px;
+		background: #fff;
+		display: none;
+	}
+}
+
+@media screen and (max-width: 828px) {
+	#apple ul.terms{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	#oculus div.third{
+		width: 100%;
+		float: none;
+	}
+
+	#apple .language{
+		float: none;
+		margin-left: 10px;
+	}
+
+	#apple .fives{
+		width: 96%;
+		padding: 0 2%;
+	}
+
+	#apple .fives h5{
+		border-bottom: 1px solid #E3E3E3;
+		padding: 10px 0;
+		margin-top: 0;
+		cursor: pointer;
+		position: relative;
+	}
+
+	#apple .fives h5:after{
+		content: "+";
+		display: block;
+		position: absolute;
+		color: #000;
+		right: 10px;
+		top: 8px;
+		transition: 0.2s;
+	}
+
+	#apple .fives h5.active:after{
+		transform: rotate(45deg);
+		transition: 0.2s;
+	}
+
+	#apple .fives h5:hover{
+		color: #000;
+	}
+
+	#apple .fives ul{
+		display: none;
+	}
+
+	#apple .fives ul li{
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+
+	#hero h1{
+		margin-top: 40px;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	#hero h1,#hero p{
+		width: 70%;
+	}
+
+	#hero .back{
+		width: 30%;
+		left: 70%;
+		min-height: 700px;
+		position: absolute;
+	}
+
+	#hero span{
+		display: table;
+		margin: 20px auto;
+	}
+
+	#hero, #hero .back{
+		min-height: 500px;
+	}
+
+	.mobile-btn{
+		display: block;
+	}
+
+    nav ul.left-btns{
+    	position: absolute;
+    	z-index: 2;
+    	top: 47px;
+    	width: 100%;
+    	margin-left: 0;
+    	border-top: 1px solid #DFDFDF;
+    	background: #fff;
+    	overflow-x: hidden;
+    	overflow-y: auto;
+    	display: none;
+    }
+
+    nav ul.left-btns li{
+    	float: none;
+    	position: relative;
+    }
+
+    nav ul.left-btns li a{
+    	display: block;
+    }
+
+   nav ul.left-btns > li.dropdown > ul{
+    	position: relative;
+    	top: 0px;
+    	width: 100%;
+    	border: 0;
+    }
+
+     nav ul.left-btns > li.dropdown{
+     	width: 100%;
+     }
+
+    nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		top: 0px;
+		font-size: 15px;
+		left: 0px;
+		background: #E5E5E5;
+		display: none;
+		width: 100%;
+		min-height: 100%;
+		border-bottom: none;
+	}
+
+	nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
+		transform: rotate(90deg);
+	}
+
+	nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
+		display: none;
+	}
+
+	nav ul.left-btns > li.dropdown > a:after{
+		right: 10px;
+	}
+
+	.user-card{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		right: 0px;
+		left: 0px;
+		width: 100%;
+		top: 47px;
+		background: #fff;
+		display: none;
+	}
+
+	nav .search i{
+		display: none;
+	}
+
+	.mobile-search{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.account-btn span{
+		display: none;
+	}
+
+	#hero h1,#hero p{
+		width: 90%;
+		padding: 0 5%;
+		text-align: center;
+	}
+
+	#hero,#hero .back{
+		min-height: 550px;
+	}
+
+	#hero .back{
+		display: none;
+	}
+
+	#invision .four-box span{
+		left: 15px;
+	}
+
+}
+
+
+@media screen and (max-width: 345px) {
+	#hero h1{
+		font-size: 22px;
+	}
+	#hero p{
+		font-size: 19px;
+	}
+
+	#invision .four-box{
+		width: 290px;
+	}
+
+	#invision .four-box button{
+		width: 101.2%;
+		margin-left: -2px;
+	}
+}

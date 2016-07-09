@@ -1,0 +1,29 @@
+{
+  "name": "js_project",
+  "version": "1.0.0",
+  "description": "JS task from Ciklum (internship)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/webpack",
+    "watch": "node_modules/.bin/webpack -w",
+    "deploy": "node_modules/.bin/webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iMcreAtive/js.git"
+  },
+  "author": "Igor Mostovenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iMcreAtive/js/issues"
+  },
+  "homepage": "https://github.com/iMcreAtive/js#readme",
+  "devDependencies": {
+    "jquery": "^3.1.0",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "webpack": "^1.13.1"
+  }
+}

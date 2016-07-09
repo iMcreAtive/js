@@ -1,4 +1,5 @@
 var $ = require("jquery");
+require("./invision-form.css");
 
 	function nameValid(){
 		var name = $("#invision-form input[name=name]").val();

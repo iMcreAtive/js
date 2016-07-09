@@ -6,4 +6,4 @@ require("./parts/hero/hero.js");
 require("./parts/oculus/oculus.js");
 // other
 require("./js/responsive.js");
-require("./css/main.styl");
+require('./css/main.styl');

@@ -1,4 +1,4 @@
-nav{
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700&subset=latin,cyrillic-ext);nav{
 	background: #fff;
 	border-bottom: 1px solid #E6E6E6;
 	display: block;
@@ -1060,3 +1060,17 @@ nav .search i{
 	}
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+.container {
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}

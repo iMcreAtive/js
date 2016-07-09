@@ -12,7 +12,11 @@ module.exports = {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
-            { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
+            {
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract("style", "css", "less")
+            },
+            { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader') },
             { test: /\.(png|jpg|gif)$/, loader: "url-loader?name=/bundle/[name].[ext]" },
         ]
     },

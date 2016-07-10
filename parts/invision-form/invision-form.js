@@ -19,10 +19,13 @@ require("./invision-form.css");
 		var isNameValid = nameValid($('#invision-form input[name=name]').val());
 		var isPassValid = passValid($('#invision-form input[name=email]').val());
 		var isEmailValid = emailValid($('#invision-form input[name=pass]').val());
+<<<<<<< HEAD
 
 		console.log(isNameValid);
 		console.log(isPassValid);
 		console.log(isEmailValid);
+=======
+>>>>>>> master
 
 		if(!isNameValid || !isPassValid || !isEmailValid){
 			e.preventDefault();

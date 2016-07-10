@@ -10234,6 +10234,11 @@
 	var $ = __webpack_require__(2);
 	__webpack_require__(8);
 
+		// form controls
+		var inputName  = $('#invision-form input[name=name]');
+		var inputEmail = $('#invision-form input[name=email]');
+		var inputPass  = $('#invision-form input[name=pass]');
+
 		function nameValid(name){
 			return setNameClass(name.length >= 2 && name.length <= 16);
 		}
@@ -10249,9 +10254,9 @@
 
 		$('#invision-form').on('submit', function(e){
 
-			var isNameValid = nameValid($('#invision-form input[name=name]').val());
-			var isPassValid = passValid($('#invision-form input[name=pass]').val());
-			var isEmailValid = emailValid($('#invision-form input[name=email]').val());
+			var isNameValid = nameValid(inputName.val());
+			var isPassValid = passValid(inputPass.val());
+			var isEmailValid = emailValid(inputEmail.val());
 
 			if(!isNameValid || !isPassValid || !isEmailValid){
 				e.preventDefault();
@@ -10261,9 +10266,9 @@
 
 		function setNameClass(valid){
 			if(valid){
-				$('#invision-form input[name=name]').removeClass('invalid');
+				inputName.removeClass('invalid');
 			} else {
-				$('#invision-form input[name=name]').addClass('invalid');
+				inputName.addClass('invalid');
 			}
 
 			return valid;
@@ -10271,9 +10276,9 @@
 
 		function setEmailClass(valid){
 			if(valid){
-				$('#invision-form input[name=email]').removeClass('invalid');
+				inputEmail.removeClass('invalid');
 			} else {
-				$('#invision-form input[name=email]').addClass('invalid');
+				inputEmail.addClass('invalid');
 			}
 
 			return valid;
@@ -10281,21 +10286,21 @@
 
 		function setPassClass(valid){
 			if(valid){
-				$('#invision-form input[name=pass]').removeClass('invalid');
+				inputPass.removeClass('invalid');
 			} else {
-				$('#invision-form input[name=pass]').addClass('invalid');
+				inputPass.addClass('invalid');
 			}
 
 			return valid;
 		}
 
-		$('#invision-form input[name=name]').on('change', function(event){ 
+		inputName.on('change', function(event){ 
 			nameValid($(event.target).val());
 		});
-		$('#invision-form input[name=email]').on('change', function(event){
+		inputEmail.on('change', function(event){
 			emailValid($(event.target).val());
 		});
-		$('#invision-form input[name=pass]').on('change', function(event){
+		inputPass.on('change', function(event){
 			passValid($(event.target).val());
 		});
 

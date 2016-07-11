@@ -1,1 +1,1 @@
-require("./hero.css");
+require("./hero.styl");

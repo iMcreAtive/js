@@ -1,5 +1,5 @@
 var $ = require("jquery");
-require("./invision-form.css");
+require("./invision-form.styl");
 
 // form controls
 var inputName  = $('#invision-form input[name=name]');

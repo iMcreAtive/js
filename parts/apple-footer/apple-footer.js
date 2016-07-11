@@ -1,5 +1,5 @@
 var $ = require("jquery");
-require("./apple-footer.css");
+require("./apple-footer.styl");
 
 $('.footer-toggle').on('click', function(){
 	if(window.innerWidth <= 720){

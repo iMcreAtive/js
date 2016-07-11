@@ -1,0 +1,139 @@
+clearListStyle()
+	list-style none
+	margin 0
+	padding 0
+
+#apple
+	background #F2F2F2
+
+	& div.container
+		padding-top 30px
+		padding-bottom 20px 
+
+	& .fives
+		display block
+		width 18%
+		float left
+		padding 0 1%
+
+	& .fives h5
+		margin 0
+		margin-top 15px
+		font-size 13px
+		font-weight normal
+
+	& .fives ul
+		clearListStyle()
+
+		& li
+			& a 
+				font-size 11px
+				color #666666
+				text-decoration none
+
+				&:hover
+					text-decoration underline
+
+	& .moreways
+		font-size 11px
+		color #999999
+		display block
+		padding 20px 10px 0 10px
+
+		&:hover
+			text-decoration underline
+			color #333
+
+	& .copyright
+		font-size 11px
+		color #999
+		display inline-block
+		float left
+		margin-top 10px
+		padding 0 10px
+
+	& ul.terms
+		clearListStyle()
+		margin 5px 0 5px 20px
+		display inline-block
+		float left
+
+		& li
+			float left
+			padding 0
+			margin 0 10px
+			position relative
+
+			&:after
+				content "|"
+				display block
+				position absolute
+				right -15px
+				top 2px
+				color #d6d6d6
+
+			&:nth-last-child(1):after
+				display none
+
+			& a
+				color #666
+				font-size 12px
+				text-decoration none
+
+				&:hover
+					color #333
+					text-decoration underline
+
+	& .language
+		color #999
+		text-decoration none
+		font-size 12px
+		display block
+		float right
+		margin-top 10px
+
+		& img
+			margin-left 5px
+
+@media screen and (max-width 828px)
+	#apple ul.terms
+		margin-left 0px
+
+@media screen and (max-width 720px)
+	#apple
+		& .language
+			float none
+			margin-left 10px
+
+		& .fives
+			width 96%
+			padding 0 2%
+
+			& h5
+				border-bottom 1px solid #e3e3e3
+				padding 10px 0
+				margin-top 0px
+				cursor pointer
+				position relative
+
+				&:after
+					content "+"
+					display block
+					position absolute
+					color #000
+					right 10px
+					top 8px
+					transition 0.2s
+
+				&.active:after
+					transform rotate(45deg)
+					transition 0.2s
+
+				&:hover
+					color #000
+
+			& ul
+				display none
+
+				& li
+					padding 10px

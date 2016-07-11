@@ -6,4 +6,4 @@ function setMobileNavHeight(){
 }
 
 $(function(){ setMobileNavHeight(); });
-$(window).resize(function() { setMobileNavHeight(); if(window.innerWidth >= 720) $("#apple ul").show(); });
+$(window).resize(function() { setMobileNavHeight(); if(window.innerWidth >= 720) { $("#apple ul").show(); $('.footer-toggle').removeClass('active'); } else $("#apple ul").hide(); });

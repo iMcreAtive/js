@@ -1,5 +1,5 @@
 var $ = require("jquery");
-require("./navigation.css");
+require("./navigation.styl");
 
 $('nav ul li.dropdown > a.expand').on('click', function(){
 	if(!$(this).parent('li.dropdown').hasClass('active')){

@@ -1,52 +1,72 @@
 var $ = require("jquery");
-require("./invision-form.css");
+require("./invision-form.styl");
 
-	function nameValid(name){
-		return name.length >= 2 && name.length <= 16;
+// form controls
+var inputName  = $('#invision-form input[name=name]');
+var inputEmail = $('#invision-form input[name=email]');
+var inputPass  = $('#invision-form input[name=pass]');
+
+function nameValid(name){
+	return setNameClass(name.length >= 2 && name.length <= 16);
+}
+
+function emailValid(email){
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return setEmailClass(re.test(email));
+}
+
+function passValid(pass){
+	return setPassClass(pass.length >= 4 && pass.length <= 16);
+}
+
+$('#invision-form').on('submit', function(e){
+
+	var isNameValid = nameValid(inputName.val());
+	var isPassValid = passValid(inputPass.val());
+	var isEmailValid = emailValid(inputEmail.val());
+
+	if(!isNameValid || !isPassValid || !isEmailValid){
+		e.preventDefault();
+		return false;
+	}
+});
+
+function setNameClass(valid){
+	if(valid){
+		inputName.removeClass('invalid');
+	} else {
+		inputName.addClass('invalid');
 	}
 
-	function emailValid(email){
-		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(email);
+	return valid;
+}
+
+function setEmailClass(valid){
+	if(valid){
+		inputEmail.removeClass('invalid');
+	} else {
+		inputEmail.addClass('invalid');
 	}
 
-	function passValid(pass){
-		return pass.length >= 4 && pass.length <= 16;
+	return valid;
+}
+
+function setPassClass(valid){
+	if(valid){
+		inputPass.removeClass('invalid');
+	} else {
+		inputPass.addClass('invalid');
 	}
 
-	$('#invision-form').on('submit', function(e){
+	return valid;
+}
 
-		var isNameValid = nameValid($('#invision-form input[name=name]').val());
-		var isPassValid = passValid($('#invision-form input[name=email]').val());
-		var isEmailValid = emailValid($('#invision-form input[name=pass]').val());
-
-		if(!isNameValid || !isPassValid || !isEmailValid){
-			e.preventDefault();
-			return false;
-		}
-	});
-
-	$('#invision-form input[name=name]').on('change', function(event){ 
-		var input = $(event.target);
-		if(nameValid(input.val())){
-			input.removeClass('invalid');
-		} else {
-			input.removeClass('invalid').addClass('invalid');
-		}
-	});
-	$('#invision-form input[name=email]').on('change', function(event){
-		var input = $(event.target);
-		if(emailValid(input.val())){
-			input.removeClass('invalid');
-		} else {
-			input.removeClass('invalid').addClass('invalid');
-		}
-	});
-	$('#invision-form input[name=pass]').on('change', function(event){
-		var input = $(event.target);
-		if(passValid(input.val())){
-			input.removeClass('invalid');
-		} else {
-			input.removeClass('invalid').addClass('invalid');
-		}
-	});
+inputName.on('change', function(event){ 
+	nameValid($(event.target).val());
+});
+inputEmail.on('change', function(event){
+	emailValid($(event.target).val());
+});
+inputPass.on('change', function(event){
+	passValid($(event.target).val());
+});

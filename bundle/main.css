@@ -69,7 +69,7 @@ nav ul.left-btns > li.dropdown > ul {
   border-bottom: 1px solid #aaa;
   display: none;
 }
-nav ul.left-btns > li.dropdown > ul > li a {
+nav ul.left-btns > li.dropdown > ul > li > a {
   padding: 15px 20px;
   display: block;
   text-decoration: none;
@@ -78,20 +78,18 @@ nav ul.left-btns > li.dropdown > ul > li a {
   position: relative;
   transition: 1s;
 }
-nav ul.left-btns > li.dropdown > ul > li a:hover {
+nav ul.left-btns > li.dropdown > ul > li > a:hover {
   background: #e5e5e5;
   transition: 0.2s;
 }
-nav ul.left-btns > li.dropdown > ul > li.dropright > a {
+nav ul.left-btns > li.dropdown > ul > li.dropright > a:after {
+  content: "\203A";
   display: block;
   position: absolute;
   top: 18px;
   right: 10px;
   font-size: 13px;
   font-weight: 100;
-}
-nav ul.left-btns > li.dropdown > ul > li.dropright > a:after {
-  content: "\203A";
 }
 nav ul.left-btns > li.dropdown > ul > li.dropright > ul {
   list-style: none;
@@ -190,6 +188,12 @@ nav .account-btn :focus {
   background: #f2f2f2;
   transition: 0.3s;
 }
+nav .account-btn.active {
+  background: #fff;
+  z-index: 4;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+}
 nav .account-btn img {
   -webkit-border-radius: 90px;
   -moz-border-radius: 90px;
@@ -203,49 +207,14 @@ nav .account-btn span {
   display: inline-block;
   font-size: 14px;
 }
-nav .user-card {
-  display: block;
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 47px;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  display: none;
-}
-nav .user-card img {
-  width: 64px;
-  height: 64px;
-  -webkit-border-radius: 90px;
-  -moz-border-radius: 90px;
-  border-radius: 90px;
-}
-nav .user-card .user-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin: 10px -10px -10px -10px;
-}
-nav .user-card .user-menu li a {
-  padding: 10px;
-  color: #333;
-  text-decoration: none;
-  font-size: 15px;
-  display: block;
-  transition: 1s;
-}
-nav .user-card .user-menu li a:hover {
-  background: #dfdfdf;
-  transition: 1s;
-}
-nav .user-card > div > span {
+nav .account-btn > div > span {
   display: block;
   font-size: 18px;
   color: #333;
   font-weight: normal;
   margin: 0 0 0 80px;
 }
-nav .user-card > div > span:nth-child(3) {
+nav .account-btn > div > span:nth-child(3) {
   font-size: 15px;
   color: #666;
 }
@@ -288,6 +257,42 @@ nav .mobile-search button {
   background: transparent;
   border: none;
 }
+.user-card {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 47px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  display: none;
+}
+.user-card img {
+  width: 64px;
+  height: 64px;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+}
+.user-card .user-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 10px -10px -10px -10px;
+}
+.user-card .user-menu li a {
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  transition: 1s;
+}
+.user-card .user-menu li a:hover {
+  background: #dfdfdf;
+  transition: 1s;
+}
 @media screen and (max-width: 1130px) {
   nav div#logo {
     margin-left: 15px;
@@ -305,19 +310,37 @@ nav .mobile-search button {
   }
   nav ul.left-btns {
     position: absolute;
+    z-index: 2;
+    top: 47px;
+    right: 0;
+    width: 250px;
+    margin-left: 0;
+    border-top: 1px solid #dfdfdf;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
   }
-  li,
-  float none,
-  position relative,
-  a,
-  display block,
-  li.dropdown,
-  width 100%,
-  ul,
-  top 0px,
-  border 0,
-  li.dropright,
-  clearListStyle() {
+  nav ul.left-btns li {
+    float: none;
+    position: relative;
+  }
+  nav ul.left-btns li a {
+    display: block;
+  }
+  nav ul.left-btns > li.dropdown {
+    width: 100%;
+  }
+  nav ul.left-btns > li.dropdown > ul {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    border: 0;
+  }
+  nav ul.left-btns > li.dropdown > ul > li.dropright > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     position: relative;
     top: 0px;
     font-size: 15px;
@@ -328,17 +351,17 @@ nav .mobile-search button {
     min-height: 100%;
     border-bottom: none;
   }
-  a:after {
+  nav ul.left-btns > li.dropdown > ul > li.dropright > a:after {
     transform: rotate(90deg);
   }
-  :hover > ul {
+  nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul {
     display: none;
   }
-  a,
-  :after,
-  right 10px,
-  .user-card,
-  display block {
+  nav ul.left-btns > li.dropdown > a:after {
+    right: 10px;
+  }
+  nav .user-card {
+    display: block;
     position: absolute;
     z-index: 2;
     right: 0;
@@ -348,78 +371,79 @@ nav .mobile-search button {
     display: none;
   }
 }
-/*@media screen and (max-width 680px)
-	nav 
-		& ul.left-btns
-	    	position absolute
-	    	z-index 2
-	    	top 47px
-	    	width 100%
-	    	margin-left 0
-	    	border-top 1px solid #DFDFDF
-	    	background #fff
-	    	overflow-x hidden
-	    	overflow-y auto
-	    	display none
-
-	    	& li
-	    		float none
-	    		position relative
-
-	    		& a
-	    			display block
-
-	    	& li.dropdown
-	    		width 100%
-
-	    		& ul
-	    			position relative
-	    			top 0px
-	    			width 100%
-	    			border 0
-
-	    			& > li.dropright
-	    				& > ul
-	    					clearListStyle()
-	    					position relative;
-							top 0px
-							font-size 15px
-							left 0px
-							background #E5E5E5
-							display none
-							width 100%
-							min-height 100%
-							border-bottom none
-
-						& a:after
-							transform rotate(90deg)
-
-						&:hover
-							& > ul
-								display none
-
-				& a:after
-					right 10px
-
-		& .user-card
-			display block
-			position absolute
-			z-index 2
-			right 0px
-			left 0px
-			width 100%
-			top 47px
-			background #fff
-			display none
-
-		& .search i
-			display none
-
-		& .mobile-search
-			display block
-
-		& .mobile-btn
-			display block*/
+@media screen and (max-width: 680px) {
+  nav ul.left-btns {
+    position: absolute;
+    z-index: 2;
+    top: 47px;
+    width: 100%;
+    margin-left: 0;
+    border-top: 1px solid #dfdfdf;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+  }
+  nav ul.left-btns li {
+    float: none;
+    position: relative;
+  }
+  nav ul.left-btns li a {
+    display: block;
+  }
+  nav ul.left-btns li.dropdown {
+    width: 100%;
+  }
+  nav ul.left-btns li.dropdown ul {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    border: 0;
+  }
+  nav ul.left-btns li.dropdown ul > li.dropright > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0px;
+    font-size: 15px;
+    left: 0px;
+    background: #e5e5e5;
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    border-bottom: none;
+  }
+  nav ul.left-btns li.dropdown ul > li.dropright a:after {
+    transform: rotate(90deg);
+  }
+  nav ul.left-btns li.dropdown ul > li.dropright:hover > ul {
+    display: none;
+  }
+  nav ul.left-btns li.dropdown a:after {
+    right: 10px;
+  }
+  nav .user-card {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    top: 47px;
+    background: #fff;
+    display: none;
+  }
+  nav .search i {
+    display: none;
+  }
+  nav .mobile-search {
+    display: block;
+  }
+  nav .mobile-btn {
+    display: block;
+  }
+}
 @media screen and (max-width: 450px) {
   .account-btn span {
     display: none;

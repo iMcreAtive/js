@@ -1,530 +1,429 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700&subset=latin,cyrillic-ext);nav{
-	background: #fff;
-	border-bottom: 1px solid #E6E6E6;
-	display: block;
-	width: 100%;
-	height: 48px;
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700&subset=latin,cyrillic-ext);nav {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  width: 100%;
+  height: 48px;
 }
-
-nav div#logo{
-	float: left;
+nav div#logo {
+  float: left;
 }
-
-nav div#logo a{
-	margin-top: 13px;
-	display: inline-block;
+nav div#logo a {
+  margin-top: 13px;
+  display: inline-block;
 }
-
-nav div#logo a img{
-	height: 23px;
-	width: 100px;
+nav div#logo a img {
+  height: 23px;
+  width: 100px;
 }
-
-nav ul.left-btns{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	float: left;
-	margin-left: 18px;
-	position: relative;
-	height: 50px;
-	z-index: 2;
+nav ul.left-btns {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-left: 18px;
+  position: relative;
+  height: 50px;
+  z-index: 2;
 }
-
-nav ul.left-btns > li{
-	float: left;
-	position: relative;
+nav ul.left-btns > li {
+  float: left;
+  position: relative;
 }
-
-nav ul.left-btns > li > a{
-	padding: 14px 20px;
-	display: inline-block;
-	text-decoration: none;
-	color: #2F2F2F;
-	font-size: 15px;
-	background: #fff;
-	position: relative;
-	transition: 1s;
+nav ul.left-btns > li > a {
+  padding: 14px 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 15px;
+  background: #fff;
+  position: relative;
+  transition: 1s;
 }
-
-nav ul.left-btns > li > a:hover, nav ul.left-btns > li > a:focus{
-	background: #F2F2F2;
-	transition: 0.3s;
+nav ul.left-btns > li > a:hover,
+nav ul.left-btns > li > a :focus {
+  background: #f2f2f2;
+  transition: 0.3s;
 }
-
-nav ul.left-btns > li.dropdown > a:after{
-    content: "\2039";
-    display: block;
-    position: absolute;
-    top: 18px;
-    right: 10px;
-    font-size: 13px;
-    font-weight: 100;
-    transform: rotate(-90deg);
+nav ul.left-btns > li.dropdown > a:after {
+  content: "\2039";
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  font-size: 13px;
+  font-weight: 100;
+  transform: rotate(-90deg);
 }
-
-
-/*** navi drops ***/
-nav ul.left-btns > li.dropdown > ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 48px;
-	left: 0px;
-	background: #F2F2F2;
-	width: 250px;
-	border-right: 1px solid #E6E6E6;
-	border-left: 1px solid #E6E6E6;
-	border-bottom: 1px solid #AAAAAA;
-	display: none;
+nav ul.left-btns > li.dropdown > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0px;
+  background: #f2f2f2;
+  width: 250px;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-bottom: 1px solid #aaa;
+  display: none;
 }
-
-nav ul.left-btns > li.dropdown > ul > li > a{
-	padding: 15px 20px;
-	display: block;
-	text-decoration: none;
-	color: #2F2F2F;
-	font-size: 15px;
-	position: relative;
-	transition: 1s;
+nav ul.left-btns > li.dropdown > ul > li a {
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 15x;
+  position: relative;
+  transition: 1s;
 }
-
-nav ul.left-btns > li.dropdown > ul > li > a:hover{
-	background: #E5E5E5;
-	transition: 0.2s;
+nav ul.left-btns > li.dropdown > ul > li a:hover {
+  background: #e5e5e5;
+  transition: 0.2s;
 }
-
-nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
-	content: "\203A";
-    display: block;
-    position: absolute;
-    top: 18px;
-    right: 10px;
-    font-size: 13px;
-    font-weight: 100;
+nav ul.left-btns > li.dropdown > ul > li.dropright > a {
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  font-size: 13px;
+  font-weight: 100;
 }
-
-nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	top: 0px;
-	font-size: 15px;
-	left: 250px;
-	background: #E5E5E5;
-	display: none;
-	width: 300px;
-	min-height: 100%;
-	border-bottom: 1px solid #AAAAAA;
+nav ul.left-btns > li.dropdown > ul > li.dropright > a:after {
+  content: "\203A";
 }
-
-nav ul.left-btns > li.dropdown > ul > li.dropright:hover{
-	background: #E5E5E5;
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  font-size: 15px;
+  left: 250px;
+  background: #e5e5e5;
+  display: none;
+  width: 300px;
+  min-height: 100%;
+  border-bottom: 1px solid #aaa;
 }
-
-nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
-	display: block;
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a {
+  padding: 15px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: 1s;
 }
-
-nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a{
-	padding: 15px 20px;
-	display: block;
-	color: #333333;
-	text-decoration: none;
-	transition: 1s;
+nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a:hover {
+  background: #dbdbdb;
+  transition: 0.2s;
 }
-
-nav ul.left-btns > li.dropdown > ul > li.dropright > ul > li > a:hover{
-	background:#DBDBDB;
-	transition: 0.2s;
+nav ul.left-btns > li.dropdown > ul > li.dropright:hover {
+  background: #e5e5e5;
 }
-/*** /navi drops ***/
-
-/*** search ***/
-nav .search{
-	float: right;
-	display: block;
-	position: relative;
+nav ul.left-btns > li.dropdown > ul > li.dropright:hover ul {
+  display: block;
 }
-
-nav .search input{
-	width: 200px;
-	height: 20px;
-	padding: 6px 30px 6px 10px;
-	font-size: 17px;
-	margin-top: 6px;
-	color: #333;
+nav .search {
+  float: right;
+  display: block;
+  position: relative;
+}
+nav .search input {
+  width: 200px;
+  height: 20xp;
+  padding: 6px 30px 6px 10px;
+  font-size: 17px;
+  margin-top: 6px;
+  color: #333;
 }
 nav .search input::-webkit-input-placeholder,
-nav .search input::-moz-placeholder,
-nav .search input:-moz-placeholder,
-nav .search input:-ms-input-placeholder{
-	color:#2F2F2F;
+nav .search input ::-moz-placeholder,
+nav .search input :-moz-placeholder,
+nav .search input :-ms-input-placeholder {
+  color: #2f2f2f;
 }
-
-nav .search input:focus{
-	outline: none;
+nav .search input:focus {
+  outline: none;
 }
-
-
-nav .search i{
-	position: absolute;
-	top: 14px;
-	right: 10px;
-	color: #ABABB3;
+nav .search i {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  color: #ababb3;
 }
-/*** /search ***/
-
-/*** cart ***/
-.cart-btn{
-	padding: 14px 10px;
-	display: inline-block;
-	text-decoration: none;
-	color: #666;
-	font-size: 15px;
-	background: #fff;
-	position: relative;
-	float: right;
-	margin: 0 0 0 10px;
-	transition: 1s; 
+nav .cart-btn {
+  padding: 14px 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #666;
+  font-size: 15px;
+  background: #fff;
+  position: relative;
+  float: right;
+  margin: 0 0 0 10px;
+  transition: 1s;
 }
-
-.cart-btn:hover, .cart-btn:focus{
-	background: #F2F2F2;
-	transition: 0.3s;
+nav .cart-btn:hover,
+nav .cart-btn :focus {
+  background: #f2f2f2;
+  transition: 0.2s;
 }
-
-.cart-btn span{
-	font-size: 13px;
+nav .cart-btn span {
+  font-size: 13px;
 }
-/*** /cart ***/
-
-/*** account-btn ***/
-.account-btn{
-	padding: 5px 10px;
-	display: inline-block;
-	text-decoration: none;
-	color: #2F2F2F;
-	font-size: 14px;
-	background: #fff;
-	position: relative;
-	float: right;
-	border-left: 1px solid #fff;
-	border-right: 1px solid #fff;
-	transition: 1s;
+nav .account-btn {
+  padding: 5px 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 14px;
+  background: #fff;
+  position: relative;
+  float: right;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transition: 1s;
 }
-
-.account-btn:hover, .account-btn:focus{
-	background: #F2F2F2;
-	transition: 0.3s;
+nav .account-btn:hover,
+nav .account-btn :focus {
+  background: #f2f2f2;
+  transition: 0.3s;
 }
-
-.account-btn.active{
-	background: #fff;
-	z-index: 4;
-	border-left: 1px solid #DFDFDF;
-	border-right: 1px solid #DFDFDF;
+nav .account-btn img {
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  height: 38px;
 }
-
-.account-btn img{
-	-webkit-border-radius: 90px;
-	-moz-border-radius: 90px;
-	border-radius: 90px;
-	height: 38px;
+nav .account-btn span {
+  padding-top: 10px;
+  padding-right: 5px;
+  color: #666;
+  display: inline-block;
+  font-size: 14px;
 }
-
-.account-btn span{
-	padding-top: 10px;
-	padding-right: 5px;
-	color: #666;
-	display: inline-block;
-	font-size: 14px;
+nav .user-card {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 47px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  display: none;
 }
-/*** /account-btn ***/
-
-/*** user-card ***/
-.user-card{
-	display: block;
-	position: absolute;
-	z-index: 2;
-	right: 0;
-	top: 47px;
-	padding: 10px;
-	background: #fff;
-	border: 1px solid #E6E6E6;
-	display: none;
+nav .user-card img {
+  width: 64px;
+  height: 64px;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
 }
-
-.user-card img{
-	width: 64px;
-	height: 64px;
-	-webkit-border-radius: 90px;
-	-moz-border-radius: 90px;
-	border-radius: 90px;
+nav .user-card .user-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 10px -10px -10px -10px;
 }
-
-.user-card .user-menu{
-	list-style: none;
-	padding: 0;
-	margin: 10px -10px -10px -10px; 
+nav .user-card .user-menu li a {
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  transition: 1s;
 }
-
-.user-card .user-menu li a{
-	padding: 10px 10px;
-	color: #333;
-	text-decoration: none;
-	font-size: 15px;
-	display: block;
-	transition: 1s;
+nav .user-card .user-menu li a:hover {
+  background: #dfdfdf;
+  transition: 1s;
 }
-
-.user-card .user-menu li a:hover{
-	background: #DFDFDF;
-	transition: 0.2s;
+nav .user-card > div > span {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  font-weight: normal;
+  margin: 0 0 0 80px;
 }
-
-.user-card > div > span{
-	display: block;
-	font-size: 18px;
-	color: #333;
-	font-weight: normal;
-	margin: 0 0 0 80px;
+nav .user-card > div > span:nth-child(3) {
+  font-size: 15px;
+  color: #666;
 }
-
-.user-card > div > span:nth-child(3){
-	font-size: 15px;
-	color: #666;
+nav .mobile-btn {
+  padding: 14px 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #666;
+  font-size: 15px;
+  background: #fff;
+  position: relative;
+  float: right;
+  display: none;
+  transition: 1s;
 }
-/*** /user-card ***/
-
-.mobile-btn{
-	padding: 14px 10px;
-	display: inline-block;
-	text-decoration: none;
-	color: #666;
-	font-size: 15px;
-	background: #fff;
-	position: relative;
-	float: right;
-	display: none;
-	transition: 1s; 
+nav .mobile-btn:hover,
+nav .mobile-btn :focus {
+  background: #f2f2f2;
+  transition: 0.3s;
 }
-
-.mobile-btn:hover, .mobile-btn:focus{
-	background: #F2F2F2;
-	transition: 0.3s;
+nav .mobile-btn.active {
+  background: #fff;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  z-index: 4;
 }
-
-.mobile-btn.active{
-	background: #fff;
-	border-left: 1px solid #DFDFDF;
-	border-right: 1px solid #DFDFDF;
-	z-index: 4;
+nav .mobile-search {
+  display: none;
+  padding: 15px 20px;
 }
-
-.mobile-search{
-	display: none;
-	padding: 15px 20px;
+nav .mobile-search input {
+  padding: 5px 4%;
+  width: 72%;
+  margin: 0;
 }
-
-.mobile-search input{
-	padding: 5px 4%;
-	width:72%;
-	margin: 0;
+nav .mobile-search button {
+  margin: 0;
+  width: 16%;
+  padding: 5px 2%;
+  background: transparent;
+  border: none;
 }
-
-.mobile-search button{
-	margin: 0;
-	width: 16%;
-	padding: 5px 2%;
-	background: transparent;
-	border: none;
-}
-
 @media screen and (max-width: 1130px) {
- 	nav div#logo{
- 		margin-left: 15px;
- 	}
+  nav div#logo {
+    margin-left: 15px;
+  }
 }
-
 @media screen and (max-width: 900px) {
-    nav .search input{
-        display: none;
-    }
-
-    nav .search i{
-    	display: none;
-    }
-
-	.mobile-btn{
-		display: block;
-	}
-
-    nav ul.left-btns{
-    	position: absolute;
-    	z-index: 2;
-    	top: 47px;
-    	right: 0;
-    	width: 250px;
-    	margin-left: 0;
-    	border-top: 1px solid #DFDFDF;
-    	background: #fff;
-    	overflow-x: hidden;
-    	overflow-y: auto;
-    	display: none;
-    }
-
-    nav ul.left-btns li{
-    	float: none;
-    	position: relative;
-    }
-
-    nav ul.left-btns li a{
-    	display: block;
-    }
-
-   nav ul.left-btns > li.dropdown > ul{
-    	position: relative;
-    	top: 0px;
-    	width: 100%;
-    	border: 0;
-    }
-
-     nav ul.left-btns > li.dropdown{
-     	width: 100%;
-     }
-
-    nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		position: relative;
-		top: 0px;
-		font-size: 15px;
-		left: 0px;
-		background: #E5E5E5;
-		display: none;
-		width: 100%;
-		min-height: 100%;
-		border-bottom: none;
-	}
-
-	nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
-		transform: rotate(90deg);
-	}
-
-	nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
-		display: none;
-	}
-
-	nav ul.left-btns > li.dropdown > a:after{
-		right: 10px;
-	}
-
-	.user-card{
-		display: block;
-		position: absolute;
-		z-index: 2;
-		right: 0;
-		width: 300px;
-		top: 47px;
-		background: #fff;
-		display: none;
-	}
+  nav .search input {
+    display: none;
+  }
+  nav .search i {
+    display: none;
+  }
+  nav .mobile-btn {
+    display: block;
+  }
+  nav ul.left-btns {
+    position: absolute;
+  }
+  li,
+  float none,
+  position relative,
+  a,
+  display block,
+  li.dropdown,
+  width 100%,
+  ul,
+  top 0px,
+  border 0,
+  li.dropright,
+  clearListStyle() {
+    position: relative;
+    top: 0px;
+    font-size: 15px;
+    left: 0px;
+    background: #e5e5e5;
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    border-bottom: none;
+  }
+  a:after {
+    transform: rotate(90deg);
+  }
+  :hover > ul {
+    display: none;
+  }
+  a,
+  :after,
+  right 10px,
+  .user-card,
+  display block {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 300px;
+    top: 47px;
+    background: #fff;
+    display: none;
+  }
 }
+/*@media screen and (max-width 680px)
+	nav 
+		& ul.left-btns
+	    	position absolute
+	    	z-index 2
+	    	top 47px
+	    	width 100%
+	    	margin-left 0
+	    	border-top 1px solid #DFDFDF
+	    	background #fff
+	    	overflow-x hidden
+	    	overflow-y auto
+	    	display none
 
-@media screen and (max-width: 680px) {
-	.mobile-btn{
-		display: block;
-	}
+	    	& li
+	    		float none
+	    		position relative
 
-    nav ul.left-btns{
-    	position: absolute;
-    	z-index: 2;
-    	top: 47px;
-    	width: 100%;
-    	margin-left: 0;
-    	border-top: 1px solid #DFDFDF;
-    	background: #fff;
-    	overflow-x: hidden;
-    	overflow-y: auto;
-    	display: none;
-    }
+	    		& a
+	    			display block
 
-    nav ul.left-btns li{
-    	float: none;
-    	position: relative;
-    }
+	    	& li.dropdown
+	    		width 100%
 
-    nav ul.left-btns li a{
-    	display: block;
-    }
+	    		& ul
+	    			position relative
+	    			top 0px
+	    			width 100%
+	    			border 0
 
-   nav ul.left-btns > li.dropdown > ul{
-    	position: relative;
-    	top: 0px;
-    	width: 100%;
-    	border: 0;
-    }
+	    			& > li.dropright
+	    				& > ul
+	    					clearListStyle()
+	    					position relative;
+							top 0px
+							font-size 15px
+							left 0px
+							background #E5E5E5
+							display none
+							width 100%
+							min-height 100%
+							border-bottom none
 
-     nav ul.left-btns > li.dropdown{
-     	width: 100%;
-     }
+						& a:after
+							transform rotate(90deg)
 
-    nav ul.left-btns > li.dropdown > ul > li.dropright > ul{
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		position: relative;
-		top: 0px;
-		font-size: 15px;
-		left: 0px;
-		background: #E5E5E5;
-		display: none;
-		width: 100%;
-		min-height: 100%;
-		border-bottom: none;
-	}
+						&:hover
+							& > ul
+								display none
 
-	nav ul.left-btns > li.dropdown > ul > li.dropright > a:after{
-		transform: rotate(90deg);
-	}
+				& a:after
+					right 10px
 
-	nav ul.left-btns > li.dropdown > ul > li.dropright:hover > ul{
-		display: none;
-	}
+		& .user-card
+			display block
+			position absolute
+			z-index 2
+			right 0px
+			left 0px
+			width 100%
+			top 47px
+			background #fff
+			display none
 
-	nav ul.left-btns > li.dropdown > a:after{
-		right: 10px;
-	}
+		& .search i
+			display none
 
-	.user-card{
-		display: block;
-		position: absolute;
-		z-index: 2;
-		right: 0px;
-		left: 0px;
-		width: 100%;
-		top: 47px;
-		background: #fff;
-		display: none;
-	}
+		& .mobile-search
+			display block
 
-	nav .search i{
-		display: none;
-	}
-
-	.mobile-search{
-		display: block;
-	}
-}
-
+		& .mobile-btn
+			display block*/
 @media screen and (max-width: 450px) {
-	.account-btn span{
-		display: none;
-	}
+  .account-btn span {
+    display: none;
+  }
 }
 #invision {
   background: #323a45;
